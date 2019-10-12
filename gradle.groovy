@@ -74,7 +74,7 @@ def findDefaultBasePackage(String packageDir) {
 }
 
 def generateBasePackageList(List<Unimodule> unimodules) {
-  def findMainJavaApp = new FileNameFinder().getFileNames(rootProject.getProjectDir().getPath(), '**/MainApplication.java', '')
+  def findMainJavaApp = new FileNameFinder().getFileNames(rootProject.getProjectDir().getPath(), '**/MainActivity.java', '')
   def findMainKtApp = new FileNameFinder().getFileNames(rootProject.getProjectDir().getPath(), '**/MainApplication.kt', '')
   
   if (findMainJavaApp.size() != 1 && findMainKtApp.size() != 1) {
